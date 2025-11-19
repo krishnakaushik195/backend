@@ -10,10 +10,15 @@ import base64
 
 app = Flask(__name__)
 
-# Configure CORS for React frontend
+# Configure CORS for React frontend - UPDATED
 CORS(app, resources={
     r"/api/*": {
-        "origins": ["http://localhost:8080", "https://*.lovable.app"],
+        "origins": [
+            "http://localhost:8080",
+            "https://*.lovable.app",
+            "https://chain-fit-studio-23234.onrender.com",
+            "https://*.onrender.com"
+        ],
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
     }
@@ -89,7 +94,7 @@ if __name__ == '__main__':
     print(f"\n🔗 API Endpoints:")
     print(f"   GET  /api/chains  - Get all chains")
     print(f"   GET  /api/health  - Health check")
-    print("\n📦 Loaded {len(chains_data)} chain(s)")
+    print(f"\n📦 Loaded {len(chains_data)} chain(s)")
     print("\n" + "="*50 + "\n")
     
     port = int(os.environ.get('PORT', 5000))
