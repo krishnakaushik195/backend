@@ -17,6 +17,7 @@ CORS(app, resources={
             "http://localhost:8080",
             "https://*.lovable.app",
             "https://chain-fit-studio-23234.onrender.com",
+            "https://gold-studio.onrender.com",
             "https://*.onrender.com"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
@@ -105,3 +106,4 @@ if __name__ == '__main__':
         host='0.0.0.0',
         port=port
     )
+
